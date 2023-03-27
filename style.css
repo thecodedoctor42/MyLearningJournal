@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #0E0E0E;
+}
+
+/* typography */
+
+p{
+    margin: 0;
+}
+
+.website-name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+}
+
+.selector{
+    font-weight: 600;
+    font-size: .75rem;
+}
+
+.fa-book-journal-whills{
+    font-size: 1.125rem;
+}
+
+.intro{
+    color: white;
+}
+
+.date{
+    font-size: 0.75rem;
+    margin: 0.5em 0;
+}
+
+.intro-title{
+    font-size: 2rem;
+}
+
+.blog-date{
+    font-size: 0.875rem;
+}
+
+.blog-title{
+    font-size:1.5rem;
+}
+
+.view-more{
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+footer{
+    font-size: 0.75rem;
+    color: white;
+}
+
+.footer-title{
+    font-weight: 700;
+    margin-bottom: .125em;
+}
+
+/* layout */
+
+/* header */
+
+header{
+    display: flex;
+    align-items: center;        
+    margin: 0;
+    padding: 5vw;
+    gap: 1vw;
+}
+
+.page-selectors{
+    display: flex;
+    margin-left: auto;
+}
+
+.selector{
+    padding: 1vw;
+}
+
+.home-selector{
+    margin-right: 2vw;
+}
+
+/* main */
+
+/* intro section */
+
+.intro{
+    display: grid;
+    grid-template: 1fr auto auto auto 0.1fr / 5vw 1fr 5vw;
+    text-shadow: 0 0 5px black;
+}
+
+.main-img{
+    width: 100%;
+    grid-row: 1/-1 ;
+    grid-column: 1/-1;
+    object-fit: cover;
+}
+
+.intro-date,
+.intro-title,
+.intro-body{
+    grid-column: 2/3;
+    margin: 0;
+}
+
+.intro-date{
+    grid-row: 2/3;
+}
+
+.intro-title{
+    grid-row: 3/4;
+}
+
+.intro-body{
+    grid-row: 4/5;
+}
+
+/* blogs section */
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1em;
+    margin: 7.5vw 5vw 2.5vw;
+}
+
+.blog-item{
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgb(152, 152, 152);
+}
+
+.blog-title,
+.blog-body{
+    margin: 0 0 0.2em;
+}
+
+.blog-img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.view-more{
+    display: block;
+    margin: 2em auto;
+    border: none;
+    background-color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    background-color: #202020;
+    padding: 5vw;
+}
+
+/* links */
+
+a,
+button{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+button:hover{
+    cursor: pointer;
+    color: rgb(0, 51, 138);
+}
+
+a:hover{
+    color: rgb(0, 51, 138);
+}
+
+/* medias queries */
+
+@media (min-width: 768px){
+
+    /* layout */
+
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        margin: 7.5vw 5vw 2.5vw;
+    }
+
+    /* typography */
+
+    .website-name{
+        font-family: 'Roboto', sans-serif;
+        font-size: 2vw;
+    }
+    
+    .selector{
+        font-weight: 600;
+        font-size: 1.5vw;
+    }
+    
+    .fa-book-journal-whills{
+        font-size: 3vw;
+    }
+    
+    header,
+    footer{
+        padding: min(40px, 5vw);
+    }
+
+    .date{
+        font-size: 1.25vw;
+        margin: 1vw 0;
+    }
+
+    .main-img{
+        max-height: 750px;
+    }
+
+    .intro-date{
+        font-size: 2vw;
+    }
+    
+    .intro-title{
+        font-size: 5vw;
+    }
+
+    .intro-body{
+        font-size: 2.5vw;
+    }
+    
+    .blog-title{
+        font-size:3vw;
+    }
+
+    .blog-body{
+        font-size: 1.5vw;
+    }
+
+    .view-more{
+        font-size: 1.5vw;
+    }
+    
+    footer{
+        font-size: 1vw;
+    }
+    
+    .footer-title{
+        font-weight: 700;
+        margin-bottom: .125vw;
+    }
+}
